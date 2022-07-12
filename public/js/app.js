@@ -7,7 +7,13 @@
   \*****************************/
 /***/ (() => {
 
-console.log('hello');
+var addTocart = document.querySelectorAll('.add-to-cart');
+addTocart.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    var pizzas = JSON.parse(btn.dataset.pizzas);
+    updateCart(pizzas);
+  });
+});
 
 /***/ }),
 
